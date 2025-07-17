@@ -20,6 +20,7 @@ n8n/
 ├── n8n_data/             # Mounted config directory for n8n
 ├── postgres_data/        # Mounted storage for PostgreSQL
 ```
+
 ---
 
 ## 🚀 How to Run
@@ -31,19 +32,25 @@ git clone https://github.com/jamaldevsecops/n8n.git
 cd n8n
 ```
 
-2. Start the services:
+2. Create directories for persisting the data
 
 ```bash
-docker-compose up -d
+mkdir n8n_data postgres_data
 ```
 
-3. Access n8n at: [http://localhost:5678](http://localhost:5678)
+3. Start the services:
 
-4. Access RabbitMQ management UI: [http://localhost:15672](http://localhost:15672)
+```bash
+docker-compose pull && docker-compose up -d
+```
+
+4. Access n8n at: [http://localhost:5678](http://localhost:5678)
+
+5. Access RabbitMQ management UI: [http://localhost:15672](http://localhost:15672)
 
 ---
 
-# 🛠 Services
+## 🛠 Services
 
 | Service     | Port    | Description                         |
 |-------------|---------|-------------------------------------|
